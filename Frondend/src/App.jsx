@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
 import { Context } from "./main";
+import axios from "axios";
 
 const App = () => {
   const {isAuthenticated, setIsAuthenticated, setUser} = useContext(Context);
