@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
-import { Context } from '../main';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { toast } from 'react-toastify';
+import React, { useContext, useState } from "react";
+import { Context } from "../main";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
@@ -18,15 +18,25 @@ const Register = () => {
 
   const navigateTo = useNavigate();
 
-  const handleRegister = async(e) =>{
+  const handleRegister = async (e) => {
     e.preventDefault();
-    try{
+    try {
       const response = await axios.post(
         "http://localhost:4000/api/v1/user/patient/register",
-        { firstName, lastName, email, phone, aadharNum, dob, gender, password, role: "Patient" },
+        {
+          firstName,
+          lastName,
+          email,
+          phone,
+          aadharNum,
+          dob,
+          gender,
+          password,
+          role: "Patient",
+        },
         {
           withCredentials: true,
-          headers: {"Content-type": "application/json" },
+          headers: { "Content-type": "application/json" },
         }
       );
       toast.success(response.data.message);
@@ -42,46 +52,91 @@ const Register = () => {
   }
 
   return (
-    <div className='container form-component register-form'>
+    <div className="container form-component register-form">
       <h2>Sign Up</h2>
       <p>Please sign up to continue</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis officiis quidem veniam assumenda molestiae.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis
+        officiis quidem veniam assumenda molestiae.
+      </p>
       <form onSubmit={handleRegister}>
         <div>
-          <input type='text'placeholder='First Name' value={firstName} onChange={(e)=> setFirstName(e.target.value)}/>
-          <input type='text'placeholder='Last Name' value={lastName} onChange={(e)=> setLastName(e.target.value)}/>
+          <input
+            type="text"
+            placeholder="First Name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
         </div>
         <div>
-          <input type='text'placeholder='Email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
-          <input type='number'placeholder='Phone Number' value={phone} onChange={(e)=> setPhone(e.target.value)}/>
+          <input
+            type="text"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="Phone Number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
         </div>
         <div>
-          <input type='number'placeholder='Aadhar Number' value={aadharNum} onChange={(e)=> setAadharNum(e.target.value)}/>
-          <input type='date'placeholder='Date Of Birth' value={dob} onChange={(e)=> setDob(e.target.value)}/>
+          <input
+            type="number"
+            placeholder="Aadhar Number"
+            value={aadharNum}
+            onChange={(e) => setAadharNum(e.target.value)}
+          />
+          <input
+            type="date"
+            placeholder="Date Of Birth"
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+          />
         </div>
         <div>
-          <select value={gender} onChange={(e)=> setGender(e.target.value)}>
+          <select value={gender} onChange={(e) => setGender(e.target.value)}>
             <option value="">Select Gender</option>
-            <option value= "Male">Male</option>
-            <option value= "Female">Female</option>
-            <option value= "Others">Others</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
           </select>
-          <input type='password'placeholder='Password' value={password} onChange={(e)=> setPassword(e.target.value)}/>
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
-        <div style={{gap: "10px", justifyContent: "flex-end", flexDirection: "row"}}>
-          <p style={{marginBottom: "0"}}>Already Registered?</p>
-          <Link 
-            to={"/login"} 
-            style={{textDecoration: "none", alignItems: "center"}}>
+        <div
+          style={{
+            gap: "10px",
+            justifyContent: "flex-end",
+            flexDirection: "row",
+          }}
+        >
+          <p style={{ marginBottom: "0" }}>Already Registered?</p>
+          <Link
+            to={"/login"}
+            style={{ textDecoration: "none", alignItems: "center" }}
+          >
             Login Now
           </Link>
         </div>
-        <div style={{justifyContent: "center", alignItems:"center"}}>
-          <button type='submit'>Register</button>
+        <div style={{ justifyContent: "center", alignItems: "center" }}>
+          <button type="submit">Register</button>
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default Register;
