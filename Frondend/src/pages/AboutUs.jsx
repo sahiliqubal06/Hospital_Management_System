@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Hero from '../components/Hero';
+import Biography from '../components/Biography';
 
-const About = () => {
+const AboutUs = () => {
   return (
-    <div>About</div>
-  )
+    <>
+    <Hero title={"Learn More About Us | HospiCare"} imageUrl={"/about.png"} />
+    <Biography imageUrl={"/whoweare.png"} />
+    </>
+  );
 }
 
-export default About
+export default AboutUs;
