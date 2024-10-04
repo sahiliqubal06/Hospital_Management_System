@@ -69,8 +69,8 @@ const Sidebar = () => {
         </div>
       </nav>
       <div
+        style={isAuthenticated ? { display: "none" } : { display: "flex" }}
         className="wrapper"
-        style={!isAuthenticated ? { display: "none" } : { display: "flex" }}
       >
         <GiHamburgerMenu className="hamburger" onClick={() => setShow(!show)} />
       </div>
