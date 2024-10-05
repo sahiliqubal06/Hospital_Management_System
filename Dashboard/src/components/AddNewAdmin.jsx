@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const AddNewAdmin = () => {
-  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  const { isAuthenticated } = useContext(Context);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -39,7 +39,6 @@ const AddNewAdmin = () => {
         }
       );
       toast.success(response.data.message);
-      setIsAuthenticated(true);
       navigateTo("/");
     } catch (error) {
       toast.error(error.response.data.message);
@@ -47,14 +46,14 @@ const AddNewAdmin = () => {
   };
 
   if (!isAuthenticated) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/login"} />;
   }
 
   return (
     <>
       <section className="page">
         <div className="container form-component add-admin-form">
-          <img src="/logo.png" alt="logo" className="logo"/>
+          <img src="/logo.png" alt="logo" className="logo" />
           <h1 className="form-title">ADD NEW ADMIN</h1>
           <form onSubmit={handleAddNewAdmin}>
             <div>
@@ -70,8 +69,8 @@ const AddNewAdmin = () => {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
-              </div>
-              <div>
+            </div>
+            <div>
               <input
                 type="text"
                 placeholder="Email"
@@ -84,8 +83,8 @@ const AddNewAdmin = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              </div>
-              <div>
+            </div>
+            <div>
               <input
                 type="number"
                 placeholder="Aadhar Number"
@@ -98,8 +97,8 @@ const AddNewAdmin = () => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
               />
-              </div>
-              <div>
+            </div>
+            <div>
               <select
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
