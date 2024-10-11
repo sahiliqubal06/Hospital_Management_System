@@ -1,6 +1,3 @@
-Here's a sample README file for your Hospital Management System project:
-
----
 
 # Hospital Management System
 
@@ -26,8 +23,8 @@ To run the project locally, ensure you have the following installed:
 ### Backend Setup
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/hospital-management-system.git
-    cd hospital-management-system/backend
+    [git clone https://github.com/sahiliqubal06/Hospital_Management_System.git
+    cd Hospital_Management_System/backend
     ```
 
 2. Install dependencies:
@@ -111,6 +108,3 @@ npm run dev
 ## License
 This project is licensed under the MIT License.
 
----
-
-You can customize the details as per your project and add more relevant information, like your GitHub profile link.
