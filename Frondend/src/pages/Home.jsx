@@ -8,8 +8,8 @@ const home = () => {
   return (
     <>
       <Hero
-        title={"Welcome to HospiCare! Your trusted healthcare provider."}
-        imageUrl={"/hero.png"}
+        title={"Welcome to HospiCare | Your trusted healthcare provider."}
+        imageUrl={"/hero.jpeg"}
       />
       <Biography imageUrl={"/about.png"} />
       <Departments />

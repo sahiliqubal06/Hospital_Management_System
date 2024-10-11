@@ -24,6 +24,9 @@ body {
   background: #9083d5;
   color: #fff;
 }
+p{
+  margin-top :10px ;
+}
 p,
 span,
 a {
@@ -36,6 +39,9 @@ h1 {
 h1 {
   font-size: 36px;
   font-weight: 900;
+  /* margin-left: 200px; */
+  margin-right: auto;
+  margin-top: 100px;
 }
 h2 {
   font-size: 32px;
@@ -72,6 +78,7 @@ h6 {
     padding: 0 20px;
   }
 }
+
 .hero {
   display: flex;
   gap: 50px;
@@ -581,9 +588,11 @@ input[type="time"]:before {
   color: #444;
   margin-right: 0.5em;
 }
-.logo-img{
+.logo-img {
   width: 150px;
+
+  object-fit: contain;
 }
-footer .logo-img{
+footer .logo-img {
   width: 100%;
 }
