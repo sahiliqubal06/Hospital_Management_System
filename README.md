@@ -1,4 +1,3 @@
- **Hospital Management System** project:
 
 ---
 
@@ -6,7 +5,7 @@
 
 A **MERN stack** web application designed to streamline hospital operations. Manage **patient appointments**, **doctor schedules**, and **departmental activities** with ease. This system includes an **admin dashboard** and a **user-friendly interface** for seamless management.
 
-![HospiCare Logo](#) *(Insert logo/image if available)*
+<!-- ![HospiCare Logo](#) *(Insert logo/image if available)* -->
 
 ---
 
@@ -56,7 +55,7 @@ A **MERN stack** web application designed to streamline hospital operations. Man
 ## 📂 **Project Structure**
 
 ```plaintext
-hospital-management-system/
+Hospital_Management_System/
 │
 ├── backend/
 │   ├── models/           # Mongoose schemas
@@ -92,8 +91,8 @@ hospital-management-system/
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/hospital-management-system.git
-   cd hospital-management-system
+   git clone https://github.com/sahiliqubal06/Hospital_Management_System.git
+   cd Hospital_Management_System
    ```
 
 2. **Install Dependencies**:
