@@ -122,6 +122,11 @@ h6 {
 }
 .animated-image {
   animation: moveUpDown 1s infinite alternate ease-in-out;
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  max-height: 80%;          
+  max-width: 100%;  
 }
 
 @keyframes moveUpDown {
@@ -454,6 +459,7 @@ nav .logo {
   display: flex;
   align-items: center;
   font-size: 2rem;
+  
 }
 nav .navLinks {
   flex: 2;
@@ -588,11 +594,16 @@ input[type="time"]:before {
   color: #444;
   margin-right: 0.5em;
 }
+
 .logo-img {
   width: 150px;
-
-  object-fit: contain;
-}
+  height: auto;
+  object-fit: contain;        
+  background: transparent;    
+  border-radius: 10px;        
+  mix-blend-mode: multiply;
+}   
 footer .logo-img {
   width: 100%;
+  
 }

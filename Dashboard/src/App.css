@@ -574,3 +574,11 @@ input[type="time"]:before {
   color: #444;
   margin-right: 0.5em;
 }
+.logo {
+  width: auto;
+  height: auto;
+  object-fit: contain;        
+  background: transparent;    
+  border-radius: 10px;        
+  mix-blend-mode: multiply;   
+}

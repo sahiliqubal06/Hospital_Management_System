@@ -61,8 +61,10 @@ const Dashboard = () => {
                 <h5>{user && `${user.firstName} ${user.lastName}`}</h5>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                quibusdam amet eius similique fugiat nesciunt.
+                Welcome back! Manage hospital operations seamlessly and ensure
+                quality care for every patient. Let's work together to make
+                today's tasks smooth and efficient. Your leadership drives our
+                success!
               </p>
             </div>
           </div>
