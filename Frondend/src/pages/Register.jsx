@@ -54,10 +54,15 @@ const Register = () => {
   return (
     <div className="container form-component register-form">
       <h2>Sign Up</h2>
-      <p>Please sign up to continue</p>
+      <p>Please sign up to continue.</p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis
-        officiis quidem veniam assumenda molestiae.
+        <p>
+          Create your HospiCare account to enjoy seamless access to medical
+          services. Register now to manage appointments, view your medical
+          history, and stay connected with doctors. Your information will remain
+          confidential and secure, ensuring the best healthcare experience
+          tailored just for you.
+        </p>
       </p>
       <form onSubmit={handleRegister}>
         <div>

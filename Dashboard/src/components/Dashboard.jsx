@@ -78,7 +78,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="banner">
-          <h5>Appointments</h5>
+          <h5>APPOINTMENTS</h5>
           <table>
             <thead>
               <tr>

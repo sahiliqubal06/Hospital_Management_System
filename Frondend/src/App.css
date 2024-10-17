@@ -328,7 +328,7 @@ footer .content {
   gap: 20px;
 }
 footer .content div {
-  flex: 1;
+  flex: -1;
 }
 footer .content div:nth-child(3) {
   flex: 2;
@@ -515,7 +515,7 @@ nav svg {
 }
 @media (max-width: 1100px) {
   nav {
-    background: #ffffffbf;
+    background:  rgba(255, 255, 255, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -534,7 +534,7 @@ nav svg {
     left: 0;
     height: 100%;
     width: 400px;
-    background: #ffffffbf;
+    background: #fffdfdbf;
     top: 79px;
   }
   nav .showmenu {
@@ -607,3 +607,15 @@ footer .logo-img {
   width: 100%;
   
 }
+
+.copyright {
+  text-align: center;
+  left: 10px;
+  padding: 10px;
+  color: #424242;  
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+

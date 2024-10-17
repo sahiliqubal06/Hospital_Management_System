@@ -191,18 +191,18 @@ body {
   font-size: 34px;
 }
 .dashboard .banner:first-child .firstBox .content div h5 {
-  color: #ff008d;
+  color: #a1002e;
 }
 .dashboard .banner:first-child .firstBox .content p {
   font-size: 16px;
 }
 .dashboard .banner:first-child .secondBox {
-  background: #3939d9f2;
+  background: #008080;
   color: #fff;
 }
 .dashboard .banner:first-child .thirdBox {
-  color: #ff008d;
-  background: #fff;
+  color: #fff;
+  background: #297b43;
 }
 .dashboard .banner:first-child .secondBox,
 .dashboard .banner:first-child .thirdBox {
@@ -227,15 +227,18 @@ body {
 }
 .dashboard .banner:last-child {
   height: 65vh;
-  background: #fff;
+  background: #b9b0b0;
   border-radius: 20px;
   padding: 40px;
 }
 .dashboard .banner:last-child h5 {
   font-size: 24px;
+  text-align: center;
+  font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  color: #111;
+  color: #2d8129;
+
 }
 .dashboard .banner table {
   width: 100%;
@@ -416,7 +419,8 @@ body {
 }
 
 .doctors h1 {
-  color: #3939d9f2;
+  color: #151f54;
+  text-align: center;
   margin-bottom: 30px;
   font-size: 2.3rem;
 }
@@ -441,7 +445,7 @@ body {
 }
 .doctors .banner .card h4 {
   font-size: 24px;
-  color: #333;
+  color: #a1002e;
   margin-bottom: 20px;
 }
 .doctors .banner .card div {
@@ -467,9 +471,10 @@ body {
 }
 
 .messages h1 {
-  color: #3939d9f2;
+  color: #151f54;
   margin-bottom: 30px;
   font-size: 2.3rem;
+  text-align: center;
 }
 .messages .banner {
   display: flex;

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaPhone, FaLocationArrow } from "react-icons/fa";
+import { FaPhone, FaLocationArrow, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const hours = [
@@ -57,7 +58,7 @@ const Footer = () => {
             {hours.map((element) => {
               return (
                 <li key={element.id}>
-                  <span>{element.day}</span>
+                  <span>{element.day}=</span>
                   <span>{element.time}</span>
                 </li>
               );
@@ -66,19 +67,65 @@ const Footer = () => {
           <div>
             <h4>Contact Us</h4>
             <div>
-              <FaPhone />
+              <FaPhone style={{ color: "#34b7f1" }}/>
               <span>6287365656</span>
             </div>
             <div>
-              <MdEmail />
-              <span>hospicare@gmail.com</span>
+              <MdEmail style={{ color: "#DB4437" }}/>
+              <span>
+                <a href="mailto:hospicare@gmail.com" style={{ textDecoration: "none", color: "inherit" }}>
+                  hospicare@gmail.com
+                  </a>
+              </span>
             </div>
 
             <div>
-              <FaLocationArrow />
+              <FaLocationArrow style={{ color: "#FF9800" }}/>
               <span>Birgunj-2, Nepal</span>
             </div>
+            <div>
+              <FaWhatsapp style={{ color: "#25D366" }} /> 
+              <span>
+                <a
+                  href="https://wa.me/6287365656"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Chat with Us
+                </a>
+              </span>
+            </div>
           </div>
+        </div>
+        <br />
+        <hr />
+        <div style={{ textAlign: "center", margin: "20px 0" }}>
+          <h4>Follow Us</h4>
+          <div
+            style={{ display: "flex", justifyContent: "center", gap: "15px" }}
+          >
+            <a
+              href="https://facebook.com"
+              style={{ textDecoration: "none", color: "#3b5998" }}
+            >
+              <FaFacebook size={30} />
+            </a>
+            <a
+              href="https://twitter.com"
+              style={{ textDecoration: "none", color: "#1DA1F2" }}
+            >
+              <FaTwitter size={30} />
+            </a>
+            <a
+              href="https://instagram.com"
+              style={{ textDecoration: "none", color: "#C13584" }}
+            >
+              <FaInstagram size={30} />
+            </a>
+          </div>
+        </div>
+        <br />
+        <div className="copyright">
+          <p>&copy; 2024 HospiCare. All rights reserved.</p>
         </div>
       </footer>
     </>

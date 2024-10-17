@@ -40,8 +40,13 @@ const Login = () => {
       <h2>Sign In</h2>
       <p>Please login to continue.</p>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex
-        perspiciatis laborum dolore nulla, excepturi eos.
+        <p>
+          Welcome to HospiCare! Please log in to access your personalized
+          dashboard, manage appointments, view medical history, and stay
+          connected with your healthcare providers. We prioritize secure access
+          to ensure your medical information remains confidential and protected
+          at all times.
+        </p>
       </p>
       <form onSubmit={handleLogin}>
         <input
