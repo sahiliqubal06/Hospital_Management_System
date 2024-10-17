@@ -619,3 +619,13 @@ footer .logo-img {
   width: 100%
 }
 
+
+.vector-image {
+  width: 1px;  /* Adjust as needed */
+  height: auto;
+  position: relative; /* Maintain its position */
+  right: -300px; /* Adjust as needed */
+  top: -200px;   /* Adjust as needed */
+  z-index: -1;   /* Ensure it stays behind text */
+}
+

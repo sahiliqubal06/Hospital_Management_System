@@ -84,7 +84,7 @@ const AppointmentForm = () => {
   return (
     <>
       <div className="container form-component appointment-form">
-        <h2>Appointment</h2>
+        <h2 style={{textAlign:"center", color:"#0a4769"}}>APPOINTMENT </h2>
         <form onSubmit={handleAppointment}>
           <div>
             <input

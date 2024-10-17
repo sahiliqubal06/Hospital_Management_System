@@ -8,7 +8,7 @@ const Biography = ({ imageUrl }) => {
       </div>
       <div className="banner">
     
-        <h3>Who We Are?</h3>
+        <h3 style={{textAlign:"center", color:"#0a4769"}}>Who We Are?</h3>
         <p>
           At HospiCare, we are committed to transforming healthcare management
           through innovation and efficiency. Our mission is to streamline the

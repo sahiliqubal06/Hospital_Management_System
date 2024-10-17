@@ -125,7 +125,8 @@ const Footer = () => {
         </div>
         <br />
         <div className="copyright">
-          <p>&copy; 2024 HospiCare. All rights reserved.</p>
+          <p>&copy; 2024 <strong>HospiCare</strong>. All rights reserved.</p>
+          <p style={{  marginTop: "1px" }}>Developed by <strong>Sahil Iqubal</strong></p> 
         </div>
       </footer>
     </>

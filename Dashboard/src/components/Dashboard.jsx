@@ -104,9 +104,9 @@ const Dashboard = () => {
                           className={
                             appointment.status === "Pending"
                               ? "value-pending"
-                              : appointment.status === "Rejected"
-                              ? "value-rejected"
-                              : "value-accepted"
+                              : appointment.status === "Accepted"
+                              ? "value-accepted"
+                              : "value-rejected"
                           }
                           value={appointment.status}
                           onChange={(e) =>
