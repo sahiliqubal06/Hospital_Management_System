@@ -5,7 +5,13 @@
 
 A **MERN stack** web application designed to streamline hospital operations. Manage **patient appointments**, **doctor schedules**, and **departmental activities** with ease. This system includes an **admin dashboard** and a **user-friendly interface** for seamless management.
 
-<!-- ![HospiCare Logo](#) *(Insert logo/image if available)* -->
+---
+
+## 🌐 **Deployment Link**
+
+Access the live application here:
+[Hospital Management System Live](https://hospicare-hms-si.netlify.app/)  
+[Admin Dashboard Live](https://admin-dashboard-hms-si.netlify.app/login)
 
 ---
 
@@ -148,31 +154,6 @@ Hospital_Management_System/
    cd ../dashboard
    npm run dev
    ```
-
----
-
-## ✨ **Key Features & Components**
-
-### **User Features**:
-- **Appointment Scheduling**: Patients can book appointments with doctors and receive notifications.
-- **Department Selection**: Easily choose the right department for your healthcare needs.
-  
-### **Admin Features**:
-- **Doctor Management**: Add, remove, and manage doctor profiles.
-- **Appointment Management**: View and modify patient appointments.
-- **Secure Access**: Only authorized admins can access the dashboard.
-
-### **UI & UX**:
-- **Responsive Design**: Accessible across mobile and desktop devices.
-- **Interactive Elements**: Smooth transitions and real-time updates.
-
----
-
-## 🛡️ **Security & Validation**
-
-- **Authentication**: JSON Web Tokens (JWT) ensure secure user sessions.
-- **Password Encryption**: Bcrypt secures user passwords.
-- **Data Validation**: User inputs validated using the `validator` library.
 
 ---
 
