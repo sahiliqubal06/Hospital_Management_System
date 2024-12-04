@@ -11,9 +11,12 @@ const Navbar = () => {
   const navigateTo = useNavigate();
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:4000/api/v1/user/patient/logout", {
-        withCredentials: true,
-      })
+      .get(
+        "https://hospital-management-system-63jj.onrender.com/api/v1/user/patient/logout",
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         toast.success(res.data.message);
         setIsAuthenticated(false);
@@ -25,6 +28,11 @@ const Navbar = () => {
   const gotoLogin = () => {
     navigateTo("/login");
   };
+
+  const handleMenuClick = () => {
+    setShow(false);
+  };
+
   return (
     <>
       <nav className="container">
@@ -33,9 +41,15 @@ const Navbar = () => {
         </div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            <Link to={"/"}>HOME</Link>
-            <Link to={"/appointment"}>APPOINTMENT</Link>
-            <Link to={"/about"}>ABOUT US</Link>
+            <Link to={"/"} onClick={handleMenuClick}>
+              HOME
+            </Link>
+            <Link to={"/appointment"} onClick={handleMenuClick}>
+              APPOINTMENT
+            </Link>
+            <Link to={"/about"} onClick={handleMenuClick}>
+              ABOUT US
+            </Link>
           </div>
           {isAuthenticated ? (
             <button className="logoutBtn btn" onClick={handleLogout}>

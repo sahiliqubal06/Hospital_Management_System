@@ -38,7 +38,7 @@ const AppointmentForm = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/doctors",
+        "https://hospital-management-system-63jj.onrender.com/api/v1/user/doctors",
         { withCredentials: true }
       );
       setDoctors(data.doctors);
@@ -51,7 +51,7 @@ const AppointmentForm = () => {
     try {
       const hasVisitedBool = Boolean(hasVisited);
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/appointment/post",
+        "https://hospital-management-system-63jj.onrender.com/api/v1/appointment/post",
         {
           firstName,
           lastName,
@@ -67,10 +67,11 @@ const AppointmentForm = () => {
           doctor_lastName: doctorLastName,
           address,
           hasVisited: hasVisitedBool,
-        },{
+        },
+        {
           withCredentials: true,
-          headers:{
-            'Content-Type': 'application/json',
+          headers: {
+            "Content-Type": "application/json",
           },
         }
       );
@@ -84,7 +85,7 @@ const AppointmentForm = () => {
   return (
     <>
       <div className="container form-component appointment-form">
-        <h2 style={{textAlign:"center", color:"#0a4769"}}>APPOINTMENT </h2>
+        <h2 style={{ textAlign: "center", color: "#0a4769" }}>APPOINTMENT </h2>
         <form onSubmit={handleAppointment}>
           <div>
             <input
@@ -168,15 +169,18 @@ const AppointmentForm = () => {
             <select
               value={`${doctorFirstName} ${doctorLastName}`}
               onChange={(e) => {
-                const [firstName, lastName] = e.target.value.split(" ");
+                const [firstName, ...lastNameArray] = e.target.value.split(" ");
                 setDoctorFirstName(firstName);
-                setDoctorLastName(lastName);
+                setDoctorLastName(lastNameArray.join(" "));
               }}
               disabled={!department}
             >
               <option value="">Select Doctor</option>
               {doctors
-                .filter((doctor) => doctor.doctorDepartment === department)
+                .filter(
+                  (doctor) =>
+                    doctor.doctorDepartment.trim() === department.trim()
+                )
                 .map((doctor, index) => {
                   return (
                     <option
