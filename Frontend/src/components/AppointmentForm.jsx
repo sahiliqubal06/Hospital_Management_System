@@ -169,18 +169,15 @@ const AppointmentForm = () => {
             <select
               value={`${doctorFirstName} ${doctorLastName}`}
               onChange={(e) => {
-                const [firstName, ...lastNameArray] = e.target.value.split(" ");
+                const [firstName, lastName] = e.target.value.split(" ");
                 setDoctorFirstName(firstName);
-                setDoctorLastName(lastNameArray.join(" "));
+                setDoctorLastName(lastName);
               }}
               disabled={!department}
             >
               <option value="">Select Doctor</option>
               {doctors
-                .filter(
-                  (doctor) =>
-                    doctor.doctorDepartment.trim() === department.trim()
-                )
+                .filter((doctor) => doctor.doctorDepartment === department)
                 .map((doctor, index) => {
                   return (
                     <option
